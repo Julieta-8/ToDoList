@@ -1,0 +1,19 @@
+@{
+    ViewData["Title"] = "Index";
+}
+
+<header>
+    <h1>Log In</h1>
+</header>
+<div class = "login">
+   
+    <h2> Log in</h2>
+    <form action = '@Url.Action("LoginGuardar", "Home")' method = "POST">
+        Ingrese el User
+        <input type="name" name ="UserName" />
+        Ingrese la contraseña
+        <input type="password" name = "Contraseña"/>
+        <input class = "submit" type="submit" value="Login"/>
+    </form>
+
+</div>

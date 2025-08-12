@@ -97,14 +97,14 @@ return  Tareas;
 }
 
 
-public static int ActualizarFechaTareasPorUsuario(int idUsuario)
+public static int ActualizarFechaTareasPorUsuario(int Id)
 {
-    string query = "UPDATE Tarea SET Fecha = GETDATE() WHERE IdUsuario = @idUsuario";
+    string query = "UPDATE Usuario SET UltimoLogIng = GETDATE() WHERE Id = @id";
     int registrosAfectados = 0;
 
     using (SqlConnection connection = new SqlConnection(_connectionString))
     {
-        registrosAfectados = connection.Execute(query, new { idUsuario });
+        registrosAfectados = connection.Execute(query, new { id });
     }
 
     return registrosAfectados;

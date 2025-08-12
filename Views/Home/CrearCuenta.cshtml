@@ -1,0 +1,24 @@
+@{
+    ViewData["Title"] = "CrearCuenta";
+}
+<header>
+    <h1>Sign Up</h1>
+</header>
+<div class = "signUP">
+   
+    <h2> Log in</h2>
+    <form action = '@Url.Action("SignUpGuardar", "account")' method = "POST">
+        Ingrese el User
+        <input type="name" name ="UserName" />
+        Ingrese la Nombre
+        <input type="name" name = "nombre"/>
+         Ingrese la Apellido
+        <input type="name" name = "apellido"/>
+         Ingrese la Email
+        <input type="email" name = "amail"/>
+        Ingrese la contraseña
+        <input type="password" name = "contrasena"/>
+        <input class = "submit" type="submit" value="Login"/>
+    </form>
+
+</div>

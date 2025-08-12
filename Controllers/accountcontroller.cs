@@ -1,7 +1,7 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 
-public class HomeController : Controller
+public class accountcontroller : Controller
 {
      [HttpPost]public IActionResult LoginGuardar(string UserName, string Contraseña)
 {
@@ -33,9 +33,9 @@ public class HomeController : Controller
 }
 
 
-  [HttpPost]public IActionResult SignUpGuardar(string UserName, string Contraseña)
+  [HttpPost]public IActionResult SignUpGuardar(string UserName, string nombre, string apellido, string email, string contrasena)
 {
-    Usuario u = BD.Login(UserName, Contraseña);
+    int id = BD.RegistrarUsuario(UserName, Contraseña);
 
     if (u != null)
     {
@@ -49,5 +49,17 @@ public class HomeController : Controller
         return View("CrearCuenta");
     }
 }
-  
+      public IActionResult Logout(){
+      HttpContext.Session.Clear();
+      return RedirectToAction("Index");
+      
+    }
+    public IActionResult ActualizarLogIn()
+{
+    int id = int.Parse(HttpContext.Session.GetString("idUser"));
+    BD.ActualizarFecha(id);
+   
+    return View("Cuenta");
+}
+
 }
