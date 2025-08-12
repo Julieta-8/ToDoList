@@ -1,0 +1,8 @@
+C:\Users\48799592\Downloads\ToDoList-master (1)\ToDoList-master\obj\Debug\net8.0\TP07.csproj.AssemblyReference.cache
+C:\Users\48799592\Downloads\ToDoList-master (1)\ToDoList-master\obj\Debug\net8.0\TP07.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\48799592\Downloads\ToDoList-master (1)\ToDoList-master\obj\Debug\net8.0\TP07.AssemblyInfoInputs.cache
+C:\Users\48799592\Downloads\ToDoList-master (1)\ToDoList-master\obj\Debug\net8.0\TP07.AssemblyInfo.cs
+C:\Users\48799592\Downloads\ToDoList-master (1)\ToDoList-master\obj\Debug\net8.0\TP07.csproj.CoreCompileInputs.cache
+C:\Users\48799592\Downloads\ToDoList-master (1)\ToDoList-master\obj\Debug\net8.0\TP07.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\48799592\Downloads\ToDoList-master (1)\ToDoList-master\obj\Debug\net8.0\TP07.RazorAssemblyInfo.cache
+C:\Users\48799592\Downloads\ToDoList-master (1)\ToDoList-master\obj\Debug\net8.0\TP07.RazorAssemblyInfo.cs

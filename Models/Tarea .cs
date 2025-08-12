@@ -13,7 +13,8 @@ public class Tarea
     [JsonProperty]
     public bool Finalizada  { get; set; }
     [JsonProperty]
-    public int Id { get; set; }
+    public int IdUsuario { get; set; }
+    public int Idt { get; set; }
 
  
 

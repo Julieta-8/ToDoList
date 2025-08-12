@@ -1,8 +1,8 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using TP07.Models;
+using ToDoListmaster.Models;
 
-namespace TP07.Controllers;
+namespace ToDoListmaster.Controllers;
 
 public class HomeController : Controller
 {
@@ -16,5 +16,18 @@ public class HomeController : Controller
     public IActionResult Index()
     {
         return View();
+    }
+
+    public IActionResult VerTarea(int idTarea)
+    {
+    int id = int.Parse(HttpContext.Session.GetString("idUser"));
+    ViewBag.Tarea = BD.GetUsuario(idTarea); 
+   
+    return View("Tarea");
+    }
+    public IActionResult Logout(){
+      HttpContext.Session.Clear();
+      return RedirectToAction("Index");
+      
     }
 }
