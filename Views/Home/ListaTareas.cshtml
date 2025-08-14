@@ -1,4 +1,4 @@
-<h2> Ingrese el numero de la </h2>
+<div>
     @foreach(Tarea t in @ViewBag.Tareas){
         <div style="margin-bottom: 10px;">
       <p>Titulo: @t.Titulo</p>
@@ -14,6 +14,7 @@
       <a href='@Url.Action("GuardarModificarTarea","Home",new { idTarea = t.Id })'>Modificar una tarea </a>
   
     }
+    </div>
             <a href='@Url.Action("AgregarTarea","Home")'>Agregar una tarea </a>
           <a href='@Url.Action("GuardarActualizarLogIn","account")'> Actualizar LogIn </a>
            <a href='@Url.Action("Logout","account")'> Salir </a>

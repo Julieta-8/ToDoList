@@ -9,17 +9,12 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TP07
 build_property.RootNamespace = TP07
-<<<<<<< HEAD
 build_property.ProjectDir = c:\Users\48799592\ToDoList\
-=======
-build_property.ProjectDir = c:\Users\49192786\ToDoList\
->>>>>>> 5e805e17a22660a3c8401aa1b37ba07d29a99bd5
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-<<<<<<< HEAD
 build_property.MSBuildProjectDirectory = c:\Users\48799592\ToDoList
 build_property._RazorSourceGeneratorDebug = 
 
@@ -60,39 +55,5 @@ build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [c:/Users/48799592/ToDoList/Views/_ViewStart.cshtml]
-=======
-build_property.MSBuildProjectDirectory = c:\Users\49192786\ToDoList
-build_property._RazorSourceGeneratorDebug = 
-
-[c:/Users/49192786/ToDoList/Views/Home/Account.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBY2NvdW50LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[c:/Users/49192786/ToDoList/Views/Home/CrearCuenta.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDcmVhckN1ZW50YS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[c:/Users/49192786/ToDoList/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[c:/Users/49192786/ToDoList/Views/Home/IniciarSesión.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmljaWFyU2VzacOzbi5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[c:/Users/49192786/ToDoList/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[c:/Users/49192786/ToDoList/Views/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[c:/Users/49192786/ToDoList/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[c:/Users/49192786/ToDoList/Views/_ViewStart.cshtml]
->>>>>>> 5e805e17a22660a3c8401aa1b37ba07d29a99bd5
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
