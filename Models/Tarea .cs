@@ -1,7 +1,7 @@
 using Microsoft.Data.SqlClient;
 using Dapper;
 using Newtonsoft.Json;
-namespace GrupoPresentacionWeb.Models;
+namespace ToDoListmaster.Models;
 public class Tarea
 {
        [JsonProperty]
@@ -14,7 +14,8 @@ public class Tarea
     public bool Finalizada  { get; set; }
     [JsonProperty]
     public int IdUsuario { get; set; }
-    public int Idt { get; set; }
+        [JsonProperty]
+    public int Id { get; set; }
 
  
 

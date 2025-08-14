@@ -1,7 +1,7 @@
 using Newtonsoft.Json; 
 using Dapper;
 using Microsoft.Data.SqlClient;
-namespace GrupoPresentacionWeb.Models;
+namespace ToDoListmaster.Models;
 public static class Objeto 
 {
 public static string ObjectToString<T>(T? obj)

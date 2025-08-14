@@ -1,7 +1,7 @@
 using Microsoft.Data.SqlClient;
 using Dapper;
 using Newtonsoft.Json;
-namespace GrupoPresentacionWeb.Models;
+namespace ToDoListmaster.Models;
 public class Usuario
 {
        [JsonProperty]

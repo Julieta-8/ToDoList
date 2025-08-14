@@ -1,4 +1,4 @@
-namespace TP07.Models;
+namespace ToDoListmaster.Models;
 
 public class ErrorViewModel
 {

@@ -3,7 +3,7 @@ using Dapper;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace GrupoPresentacionWeb.Models
+namespace ToDoListmaster.Models
 {
     public static class BD
     {
@@ -38,10 +38,10 @@ return tareasAfectados;
 
     public static void AgregarTarea(Tarea t)
     {
-       string query = "INSERT INTO Tarea (Idt, Titulo, Descripción, Fecha, Finalizada, IdUsuario)";
+       string query = "INSERT INTO Tarea (Id, Titulo, Descripción, Fecha, Finalizada, IdUsuario)";
         using (SqlConnection connection = new SqlConnection(_connectionString))
         {
-           connection.Execute(query, new{pIdt = t.Idt, pTitulo = t.Titulo,pDescripción = t.Descripción,pFecha = t.Fecha, pFinalizada = t.Finalizada,pIdUsuario = t.IdUsuario});
+           connection.Execute(query, new{pIdt = t.Id, pTitulo = t.Titulo,pDescripción = t.Descripción,pFecha = t.Fecha, pFinalizada = t.Finalizada,pIdUsuario = t.IdUsuario});
         }
   
     }
@@ -58,7 +58,7 @@ return tareasAfectados;
     using (SqlConnection connection = new SqlConnection(_connectionString))
     {
         int registrosAfectados = connection.Execute(query, new {
-            Id = t.Idt,
+            Id = t.Id,
             Titulo = t.Titulo,
             Descripción = t.Descripción,
             Fecha = t.Fecha,
@@ -97,25 +97,25 @@ return  Tareas;
 }
 
 
-public static int ActualizarFechaTareasPorUsuario(int Id)
+public static int ActualizarFecha(int Id)
 {
     string query = "UPDATE Usuario SET UltimoLogIng = GETDATE() WHERE Id = @id";
     int registrosAfectados = 0;
 
     using (SqlConnection connection = new SqlConnection(_connectionString))
     {
-        registrosAfectados = connection.Execute(query, new { id });
+        registrosAfectados = connection.Execute(query, new { Id });
     }
 
     return registrosAfectados;
 }
 
 
-public static int RegistrarUsuario(string nombre, string apellido, string email, string contrasena)
+public static int RegistrarUsuario(string nombre, string apellido, string email, string contrasena, string UserName)
 {
     string query = @"
-        INSERT INTO Usuario (Nombre, Apellido, Email, Contraseña) 
-        VALUES (@Nombre, @Apellido, @Email, @Contrasena);
+        INSERT INTO Usuario (Nombre, Apellido, Email, Contraseña, UserName) 
+        VALUES (@Nombre, @Apellido, @Email, @contrasena,@UserName);
         SELECT CAST(SCOPE_IDENTITY() as int);";
 
     using (SqlConnection connection = new SqlConnection(_connectionString))
@@ -125,12 +125,14 @@ public static int RegistrarUsuario(string nombre, string apellido, string email,
             Nombre = nombre, 
             Apellido = apellido, 
             Email = email, 
-            Contrasena = contrasena 
+            Contrasena = contrasena,
+            UserName=UserName 
         });
 
         return nuevoId;
+  
     }
-
+}
     public static int finalizartarea(int Idtarea, bool finalizada){
     string query = @"UPDATE Tarea SET Finalizada = @Finalizada WHERE Id = @Id";
       using (SqlConnection connection = new SqlConnection(_connectionString))
@@ -140,7 +142,6 @@ public static int RegistrarUsuario(string nombre, string apellido, string email,
         return registrosAfectados;
 
     }
-}
 }
 
 

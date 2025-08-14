@@ -1,7 +1,9 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using ToDoListmaster.Models;
+namespace ToDoListmaster.Controllers;
+public class AccountController : Controller
 
-public class accountcontroller : Controller
 {
      [HttpPost]public IActionResult LoginGuardar(string UserName, string Contraseña)
 {
@@ -35,31 +37,27 @@ public class accountcontroller : Controller
 
   [HttpPost]public IActionResult SignUpGuardar(string UserName, string nombre, string apellido, string email, string contrasena)
 {
-    int id = BD.RegistrarUsuario(UserName, Contraseña);
+    int id = BD.RegistrarUsuario( nombre,  apellido,  email,  contrasena, UserName);
 
-    if (u != null)
-    {
-        HttpContext.Session.SetString("idUser", u.ToString());
-          ViewBag.Usuario = BD.Login(UserName, Contraseña);
+  
+        HttpContext.Session.SetString("idUser", id.ToString());
+          ViewBag.Usuario = BD.Login(UserName, contrasena);
         return View("Cuenta");
-    }
-    else
-    {
-        ViewBag.Error = "Login incorrecto";
-        return View("CrearCuenta");
-    }
+   
 }
       public IActionResult Logout(){
       HttpContext.Session.Clear();
       return RedirectToAction("Index");
       
     }
-    public IActionResult ActualizarLogIn()
+
+    public IActionResult GuardarActualizarLogIn()
 {
     int id = int.Parse(HttpContext.Session.GetString("idUser"));
     BD.ActualizarFecha(id);
    
     return View("Cuenta");
 }
+
 
 }

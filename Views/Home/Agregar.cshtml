@@ -1,0 +1,22 @@
+<header>
+    <h1>Complete el form para crear una nueva tarea</h1>
+</header>
+<div>
+   
+
+    <form action = '@Url.Action("GuardarAgregarTarea", "Home")' method = "POST">
+    Ingrese el Id
+        <input type="name" name ="Id" />
+        Ingrese el Titulo
+        <input type="name" name ="Titulo" />
+         Ingrese la descripción
+        <input type="name" name = "Descripcion"/>
+  Ingrese la Fecha
+        <input type="date" name ="Fecha" />
+         Ingrese su estado(si está finalizado o no)
+        <input type="bit" name = "Finalización"/>
+Ingrese su Id de Usuario
+        <input class = "submit" type="submit" value="Submit"/>
+    </form>
+
+</div>

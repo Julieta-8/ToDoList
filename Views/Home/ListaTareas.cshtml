@@ -1,0 +1,19 @@
+<h2> Ingrese el numero de la </h2>
+    @foreach(Tarea t in @ViewBag.Tareas){
+        <div style="margin-bottom: 10px;">
+      <p>Titulo: @t.Titulo</p>
+        <p>Descripción:@t.Descripción</p>
+        <p>Fecha: @t.Fecha</p>
+        <p>Finalizada: @t.Finalizada</p>
+        <p>Id: @t.Id</p>
+        <p>IdUsuario: @t.IdUsuario</p>
+    </div>
+
+             <a href='@Url.Action("GuardarFinalizarTarea","Home",new { idTarea = t.Id })'>Finalizar una tarea</a>
+    <a href='@Url.Action("GuardarEliminarTarea","Home",new { idTarea = t.Id })'>Eliminar una tarea </a>
+      <a href='@Url.Action("GuardarModificarTarea","Home",new { idTarea = t.Id })'>Modificar una tarea </a>
+  
+    }
+            <a href='@Url.Action("AgregarTarea","Home")'>Agregar una tarea </a>
+          <a href='@Url.Action("GuardarActualizarLogIn","account")'> Actualizar LogIn </a>
+           <a href='@Url.Action("Logout","account")'> Salir </a>
