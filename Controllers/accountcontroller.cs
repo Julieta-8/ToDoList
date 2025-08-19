@@ -22,20 +22,19 @@ public class accountController : Controller
     }
 }
 
-[HttpPost]public IActionResult Login()
+public IActionResult Login()
 {
         return View("IniciarSesión");
     
 }
 
-[HttpPost]public IActionResult SignUp()
+public IActionResult SignUp()
 {
         return View("CrearCuenta");
     
 }
 
-
-  [HttpPost]public IActionResult SignUpGuardar(string UserName, string nombre, string apellido, string email, string contrasena)
+public IActionResult SignUpGuardar(string UserName, string nombre, string apellido, string email, string contrasena)
 {
     int id = BD.RegistrarUsuario( nombre,  apellido,  email,  contrasena, UserName);
 
