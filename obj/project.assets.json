@@ -2455,23 +2455,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\48799592\\.nuget\\packages\\": {},
+    "C:\\Users\\49192786\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\48799592\\ToDoList\\TP07.csproj",
+      "projectUniqueName": "C:\\Users\\49192786\\ToDoList\\TP07.csproj",
       "projectName": "TP07",
-      "projectPath": "C:\\Users\\48799592\\ToDoList\\TP07.csproj",
-      "packagesPath": "C:\\Users\\48799592\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\48799592\\ToDoList\\obj\\",
+      "projectPath": "C:\\Users\\49192786\\ToDoList\\TP07.csproj",
+      "packagesPath": "C:\\Users\\49192786\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\49192786\\ToDoList\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\48799592\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\49192786\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

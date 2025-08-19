@@ -2,7 +2,7 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using ToDoListmaster.Models;
 namespace ToDoListmaster.Controllers;
-public class AccountController : Controller
+public class accountController : Controller
 
 {
      [HttpPost]public IActionResult LoginGuardar(string UserName, string Contraseña)
@@ -27,15 +27,13 @@ public IActionResult Login()
         return View("IniciarSesión");
 }
 
-
 public IActionResult SignUp()
 {
         return View("CrearCuenta");
     
 }
 
-
-  [HttpPost]public IActionResult SignUpGuardar(string UserName, string nombre, string apellido, string email, string contrasena)
+public IActionResult SignUpGuardar(string UserName, string nombre, string apellido, string email, string contrasena)
 {
     int id = BD.RegistrarUsuario( nombre,  apellido,  email,  contrasena, UserName);
 
