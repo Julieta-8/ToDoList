@@ -6,13 +6,13 @@
 
     <form action = '@Url.Action("GuardarModificarTarea", "Home")' method = "POST">
         Ingrese nuevo Titulo
-        <input type="name" name ="Titulo" />
+        <input type="name" name ="Titulo" value="@ViewBag.Tarea.Nombre" />
          Ingrese nuevo descripción
-        <input type="name" name = "Descripcion"/>
+        <input type="name" name = "Descripcion" value="@ViewBag.Tarea.Descripcion" />
   Ingrese nuevo Fecha
-        <input type="date" name ="Fecha" />
+        <input type="date" name ="Fecha" value="@ViewBag.Tarea.Fecha" />
          Ingrese nuevo Finalización
-        <input type="bit" name = "Finalización"/>
+        <input type="bit" name = "Finalización"value="@ViewBag.Tarea.Finalizacion"/>
 
         <input class = "submit" type="submit" value="Submit"/>
     </form>

@@ -12,7 +12,7 @@ public class AccountController : Controller
     if (u != null)
     {
         HttpContext.Session.SetString("idUser", u.ToString());
-          ViewBag.Usuario = BD.Login(UserName, Contraseña);
+          ViewBag.Usuario = u;
         return View("Cuenta");
     }
     else
@@ -22,13 +22,13 @@ public class AccountController : Controller
     }
 }
 
-[HttpPost]public IActionResult Login()
+public IActionResult Login()
 {
         return View("IniciarSesión");
-    
 }
 
-[HttpPost]public IActionResult SignUp()
+
+public IActionResult SignUp()
 {
         return View("CrearCuenta");
     
@@ -41,7 +41,7 @@ public class AccountController : Controller
 
   
         HttpContext.Session.SetString("idUser", id.ToString());
-          ViewBag.Usuario = BD.Login(UserName, contrasena);
+         
         return View("Cuenta");
    
 }

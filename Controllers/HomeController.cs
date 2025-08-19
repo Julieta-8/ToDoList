@@ -25,11 +25,17 @@ public class HomeController : Controller
    
     return View("ListaTarea");
 }
+   public IActionResult InfoUsuario()
+{
+    int id = int.Parse(HttpContext.Session.GetString("idUser"));
+      ViewBag.Usuarop = BD.VerUsuario(id);
+    return View("InfoUsuario");
+}
 public IActionResult VerTareas()
 {
     int id = int.Parse(HttpContext.Session.GetString("idUser"));
     ViewBag.Tareas = BD.VerTareas(id);
-   
+    
     return View("ListaTareas");
 }
 
@@ -70,7 +76,9 @@ ViewBag.Tareas =BD.VerTarea(Id);
    
     return View("Cuenta");
 }
-public IActionResult ModificarTarea(){
+public IActionResult ModificarTarea(int idtarea){
+    Tarea t= BD.VerTarea(idtarea);
+    ViewBag.Tarea = t;
 return View("Modificar");
 }
 public IActionResult GuardarModificarTarea(int Id, string Titulo, string Descripcion,DateTime Fecha, bool Finalización)

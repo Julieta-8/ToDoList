@@ -19,8 +19,8 @@ namespace ToDoListmaster.Models
             string query = "SELECT Id FROM Usuario WHERE UserName = @pUserName AND Contraseña = @pContraseña";
             u = connection.QueryFirstOrDefault<Usuario>(query, new { pUserName = UserName, pContraseña = contraseña });
         }
-if(u != null){  return u;}
- else{return u = null;}     
+        if(u != null){  return u;}
+        else{return u = null;}     
     }
 
 
@@ -82,6 +82,16 @@ Id});
 return t;
 }
 
+public static  Usuario VerUsuario(int Id){
+    Usuario u = null;
+    using (SqlConnection connection = new SqlConnection(_connectionString))
+    {
+        string query = "SELECT * FROM USUARIO WHERE ID = @pId";
+        u = connection.QueryFirstOrDefault<Usuario>(query, new { pId = Id});
+
+    }
+    return u;
+}
 
 public static List<Tarea> VerTareas(int IdUsuario){
  List<Tarea> Tareas = new List<Tarea>();

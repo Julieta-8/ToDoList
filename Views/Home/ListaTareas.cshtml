@@ -1,3 +1,5 @@
+ <a href='@Url.Action("InfoUsuario","Home")'>Ver tu Usuario  </a>
+
 <div>
     @foreach(Tarea t in @ViewBag.Tareas){
         <div style="margin-bottom: 10px;">
@@ -11,7 +13,7 @@
 
              <a href='@Url.Action("GuardarFinalizarTarea","Home",new { idTarea = t.Id })'>Finalizar una tarea</a>
     <a href='@Url.Action("GuardarEliminarTarea","Home",new { idTarea = t.Id })'>Eliminar una tarea </a>
-      <a href='@Url.Action("GuardarModificarTarea","Home",new { idTarea = t.Id })'>Modificar una tarea </a>
+      <a href='@Url.Action("ModificarTarea","Home",new { idTarea = t.Id })'>Modificar una tarea </a>
   
     }
     </div>

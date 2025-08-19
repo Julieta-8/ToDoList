@@ -79,3 +79,4 @@ C:\Users\48799592\ToDoList\obj\Debug\net8.0\refint\TP07.dll
 C:\Users\48799592\ToDoList\obj\Debug\net8.0\TP07.pdb
 C:\Users\48799592\ToDoList\obj\Debug\net8.0\TP07.genruntimeconfig.cache
 C:\Users\48799592\ToDoList\obj\Debug\net8.0\ref\TP07.dll
+C:\Users\48799592\ToDoList\bin\Debug\net8.0\System.Text.Json.dll

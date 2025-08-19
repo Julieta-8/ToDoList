@@ -9,6 +9,26 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\48799592\\ToDoList\\wwwroot\\img\\lucia.jpg",
+      "PackagePath": "staticwebassets\\img\\lucia.jpg"
+    },
+    {
+      "Id": "C:\\Users\\48799592\\ToDoList\\wwwroot\\img\\mateo.png",
+      "PackagePath": "staticwebassets\\img\\mateo.png"
+    },
+    {
+      "Id": "C:\\Users\\48799592\\ToDoList\\wwwroot\\img\\sofia.png",
+      "PackagePath": "staticwebassets\\img\\sofia.png"
+    },
+    {
+      "Id": "C:\\Users\\48799592\\ToDoList\\wwwroot\\img\\tomas.jpg",
+      "PackagePath": "staticwebassets\\img\\tomas.jpg"
+    },
+    {
+      "Id": "C:\\Users\\48799592\\ToDoList\\wwwroot\\img\\valen.jpg",
+      "PackagePath": "staticwebassets\\img\\valen.jpg"
+    },
+    {
       "Id": "C:\\Users\\48799592\\ToDoList\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
