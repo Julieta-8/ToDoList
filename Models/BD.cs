@@ -121,11 +121,11 @@ public static int ActualizarFecha(int Id)
 }
 
 
-public static int RegistrarUsuario(string nombre, string apellido, string email, string contrasena, string UserName)
+public static int RegistrarUsuario(string nombre, string apellido, string email, string contrasena, string userName)
 {
     string query = @"
-        INSERT INTO Usuario (Nombre, Apellido, Email, Contraseña, UserName) 
-        VALUES (@Nombre, @Apellido, @Email, @contrasena,@UserName);
+        INSERT INTO Usuario (Nombre, Apellido, Email, [Contraseña], UserName, FechaUltimoLogin) 
+        VALUES (@Nombre, @Apellido, @Email, @Contrasena, @UserName, NULL);
         SELECT CAST(SCOPE_IDENTITY() as int);";
 
     using (SqlConnection connection = new SqlConnection(_connectionString))
@@ -136,12 +136,12 @@ public static int RegistrarUsuario(string nombre, string apellido, string email,
             Apellido = apellido, 
             Email = email, 
             Contrasena = contrasena,
-            UserName=UserName 
+            UserName = userName 
         });
 
         return nuevoId;
-  
     }
+}
 }
     public static int finalizartarea(int Idtarea, bool finalizada){
     string query = @"UPDATE Tarea SET Finalizada = @Finalizada WHERE Id = @Id";
@@ -155,4 +155,4 @@ public static int RegistrarUsuario(string nombre, string apellido, string email,
 }
 
 
-}}
+}

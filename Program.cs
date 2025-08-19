@@ -1,15 +1,16 @@
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Servicios
 builder.Services.AddControllersWithViews();
+builder.Services.AddDistributedMemoryCache(); // para sesiones
+builder.Services.AddSession();                // activa sesiones
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Middleware
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
@@ -17,6 +18,8 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+app.UseSession(); // ← debe ir antes de Authorization
 
 app.UseAuthorization();
 

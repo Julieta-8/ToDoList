@@ -12,7 +12,7 @@ public class accountController : Controller
     if (u != null)
     {
         HttpContext.Session.SetString("idUser", u.ToString());
-          ViewBag.Usuario = u;
+        
         return View("Cuenta");
     }
     else
@@ -30,7 +30,7 @@ public IActionResult Login()
 public IActionResult SignUp()
 {
         return View("CrearCuenta");
-    
+       
 }
 
 public IActionResult SignUpGuardar(string UserName, string nombre, string apellido, string email, string contrasena)
@@ -56,6 +56,11 @@ public IActionResult SignUpGuardar(string UserName, string nombre, string apelli
    
     return View("Cuenta");
 }
-
+   public IActionResult InfoUsuario()
+{
+    int id = int.Parse(HttpContext.Session.GetString("idUser"));
+      ViewBag.Usuarop = BD.VerUsuario(id);
+    return View("InfoUsuario");
+}
 
 }

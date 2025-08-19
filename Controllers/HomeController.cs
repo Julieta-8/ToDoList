@@ -25,12 +25,7 @@ public class HomeController : Controller
    
     return View("ListaTarea");
 }
-   public IActionResult InfoUsuario()
-{
-    int id = int.Parse(HttpContext.Session.GetString("idUser"));
-      ViewBag.Usuarop = BD.VerUsuario(id);
-    return View("InfoUsuario");
-}
+
 public IActionResult VerTareas()
 {
     int id = int.Parse(HttpContext.Session.GetString("idUser"));
