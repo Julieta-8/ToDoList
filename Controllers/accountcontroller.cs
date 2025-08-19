@@ -2,7 +2,7 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using ToDoListmaster.Models;
 namespace ToDoListmaster.Controllers;
-public class AccountController : Controller
+public class accountController : Controller
 
 {
      [HttpPost]public IActionResult LoginGuardar(string UserName, string Contraseña)

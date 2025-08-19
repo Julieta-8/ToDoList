@@ -73,7 +73,7 @@ ViewBag.Tareas =BD.VerTarea(Id);
 public IActionResult ModificarTarea(){
 return View("Modificar");
 }
-public IActionResult GuardarModificarTarea(int Id, string Titulo, string Descripcion,DateTime Fecha, bool Finalización)
+public IActionResult GuardarModificarTarea(int Id, int idu,string Titulo, string Descripcion,DateTime Fecha, bool Finalización)
 {
 int id = int.Parse(HttpContext.Session.GetString("idUser"));
 Tarea NuevaTarea= new Tarea
@@ -83,7 +83,7 @@ Tarea NuevaTarea= new Tarea
     Descripción= Descripcion,
     Fecha= Fecha,
     Finalizada= Finalización,
-    IdUsuario= id ,
+    IdUsuario= idu,
  
 };
 
