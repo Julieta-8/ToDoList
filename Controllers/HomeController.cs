@@ -26,19 +26,19 @@ public class HomeController : Controller
     return View("ListaTarea");
 }
 
-public IActionResult VerTareas()
+public IActionResult ListarTareas()
 {
     int id = int.Parse(HttpContext.Session.GetString("idUser"));
     ViewBag.Tareas = BD.VerTareas(id);
     
     return View("ListaTareas");
 }
-
-public IActionResult GuardarFinalizarTarea(int idTarea,bool finalizada)
+public IActionResult GuardarFinalizarTarea(int idTarea,bool Finalización)
 {
     int id = int.Parse(HttpContext.Session.GetString("idUser"));
-    ViewBag.Tareas = BD.FinalizarTarea( idTarea,  finalizada);
-   
+    ViewBag.Tareas = BD.FinalizarTarea( idTarea,  Finalización);
+   int registrosAfectados = BD.FinalizarTarea(idTarea, Finalización);
+    ViewBag.Mensaje = $"Se actualizaron {registrosAfectados} tarea(s).";
     return View("ListaTareas");
 }
 
@@ -46,14 +46,15 @@ public IActionResult GuardarEliminarTarea(int idTarea)
 {
     int id = int.Parse(HttpContext.Session.GetString("idUser"));
     ViewBag.Tareas = BD.EliminarTarea(idTarea);
-   
+    int registrosAfectados = BD.EliminarTarea(idTarea);
+    ViewBag.Mensaje = $"Se actualizaron {registrosAfectados} tarea(s).";
     return View("ListaTareas");
 }
 
 public IActionResult AgregarTarea(){
 return View("Agregar");
 }
-public IActionResult GuardarAgregarTarea(int Id, string Titulo, string Descripcion,DateTime Fecha, bool Finalizada, int IdUsuario)
+public IActionResult GuardarAgregarTarea(int Id, string Titulo, string Descripcion,DateTime Fecha, bool Finalización, int IdUsuario)
 {
 Tarea NuevaTarea= new Tarea
 {
@@ -61,22 +62,23 @@ Tarea NuevaTarea= new Tarea
     Titulo= Titulo,
     Descripción= Descripcion,
     Fecha= Fecha,
-    Finalizada= Finalizada,
+    Finalización= Finalización,
     IdUsuario= IdUsuario ,
  
 };
  int id = int.Parse(HttpContext.Session.GetString("idUser"));
 BD.AgregarTarea(NuevaTarea);
 ViewBag.Tareas =BD.VerTarea(Id);
-   
+ 
     return View("Cuenta");
 }
 public IActionResult ModificarTarea(int idtarea){
     Tarea t= BD.VerTarea(idtarea);
     ViewBag.Tarea = t;
+    
 return View("Modificar");
 }
-public IActionResult GuardarModificarTarea(int Id, int idu,string Titulo, string Descripcion,DateTime Fecha, bool Finalización)
+ [HttpPost] public IActionResult GuardarModificarTarea(int Id, int idu,string Titulo, string Descripcion,DateTime Fecha, bool Finalización)
 {
 int id = int.Parse(HttpContext.Session.GetString("idUser"));
 Tarea NuevaTarea= new Tarea
@@ -85,7 +87,7 @@ Tarea NuevaTarea= new Tarea
     Titulo= Titulo,
     Descripción= Descripcion,
     Fecha= Fecha,
-    Finalizada= Finalización,
+    Finalización= Finalización,
     IdUsuario= idu,
  
 };
@@ -93,7 +95,8 @@ Tarea NuevaTarea= new Tarea
 
     
     ViewBag.Tareas = BD.ModificarTarea(NuevaTarea);
-   
+    int registrosAfectados = BD.ModificarTarea(NuevaTarea);
+    ViewBag.Mensaje = $"Se actualizaron {registrosAfectados} tarea(s).";
     return View("ListaTareas");
 }
 

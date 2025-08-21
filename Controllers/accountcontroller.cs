@@ -7,13 +7,13 @@ public class accountController : Controller
 {
      [HttpPost]public IActionResult LoginGuardar(string UserName, string Contraseña)
 {
-    Usuario u = BD.Login(UserName, Contraseña);
+    int id = BD.Login(UserName, Contraseña);
 
-    if (u != null)
+    if (id != -1)
     {
-        HttpContext.Session.SetString("idUser", u.ToString());
-        
-        return View("ListarTareas");
+        HttpContext.Session.SetString("idUser", id.ToString());
+        ViewBag.Usuario = BD.GetUsuario(id);
+         return RedirectToAction("ListarTareas", "Home");
     }
     else
     {
@@ -33,14 +33,14 @@ public IActionResult SignUp()
        
 }
 
-public IActionResult SignUpGuardar(string UserName, string nombre, string apellido, string email, string contrasena)
+public IActionResult SignUpGuardar(string UserName, string nombre, string apellido,  string contrasena)
 {
-    int id = BD.RegistrarUsuario( nombre,  apellido,  email,  contrasena, UserName);
+    int id = BD.RegistrarUsuario(  nombre,  apellido,   contrasena, UserName);
 
   
         HttpContext.Session.SetString("idUser", id.ToString());
          
-        return View("Cuenta");
+        return View("ListaTareas");
    
 }
       public IActionResult Logout(){
@@ -54,13 +54,17 @@ public IActionResult SignUpGuardar(string UserName, string nombre, string apelli
     int id = int.Parse(HttpContext.Session.GetString("idUser"));
     BD.ActualizarFecha(id);
    
-    return View("Cuenta");
+    return View("ListaTareas");
 }
    public IActionResult InfoUsuario()
 {
     int id = int.Parse(HttpContext.Session.GetString("idUser"));
-      ViewBag.Usuarop = BD.VerUsuario(id);
+      ViewBag.Usuario = BD.GetUsuario(id);
     return View("InfoUsuario");
 }
-
+public IActionResult Volver(){
+    
+    int id = int.Parse(HttpContext.Session.GetString("idUser"));
+        return RedirectToAction("ListarTareas", "Home");
+}
 }

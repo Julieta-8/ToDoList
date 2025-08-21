@@ -11,7 +11,7 @@ public class Tarea
     [JsonProperty]
     public DateTime Fecha  { get; set; }
     [JsonProperty]
-    public bool Finalizada  { get; set; }
+    public bool Finalización  { get; set; }
     [JsonProperty]
     public int IdUsuario { get; set; }
         [JsonProperty]

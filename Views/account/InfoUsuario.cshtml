@@ -1,3 +1,4 @@
+
 <div>
  <img src="@ViewBag.Usuario.Foto" alt="Foto de perfil" class="foto-perfil" />
         <div style="margin-bottom: 10px;">
@@ -5,9 +6,9 @@
         <p>Nombre:@ViewBag.Usuario.Nombre</p>
         <p>Apellido: @ViewBag.Usuario.Apellido</p>
         <p>UserName: @ViewBag.Usuario.UserName</p>
-        <p>Ultimo Login: @ViewBag.Usuario.UltimoLogIn</p>
+        <p>Ultimo Login: @ViewBag.Usuario.UltimoLogin</p>
         <p>Contraseña: @ViewBag.Usuario.Contraseña</p>
     </div>
 
   
-    
+     <a class ="VerUsuario" href='@Url.Action("Volver","Account")'>Volver  </a>

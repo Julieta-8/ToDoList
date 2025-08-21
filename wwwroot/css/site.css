@@ -139,3 +139,32 @@ text-decoration: none;
   margin-bottom: 15px;
 margin-left: 40% ;
 }
+
+.botones a{
+  font-size: 30px;
+  margin-bottom: 15%;
+  
+ 
+  
+  padding: 0.5%;
+  background-color: #2d4381;
+  
+  border-radius: 20px;
+  color: aliceblue;
+box-shadow: #2d4381;
+text-decoration: none;
+}
+
+.VerUsuario{
+  font-size: 30px;
+
+ margin-left: 40%;
+  
+  padding: 0.5%;
+  background-color: #2d4381;
+  
+  border-radius: 20px;
+  color: aliceblue;
+box-shadow: #2d4381;
+text-decoration: none;
+}

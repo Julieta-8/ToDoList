@@ -8,24 +8,35 @@ namespace ToDoListmaster.Models
     public static class BD
     {
         public static string _connectionString = @"Server=localhost;
-        DataBase=Presentación;Integrated Security=True;TrustServerCertificate=True;";
+        DataBase=BD;Integrated Security=True;TrustServerCertificate=True;";
 
-
-    public static Usuario Login(string UserName, string contraseña)
+    public static Usuario GetUsuario(int idUsuario)
     {
-        Usuario u = null;
+        Usuario miusuario = null;
         using (SqlConnection connection = new SqlConnection(_connectionString))
         {
-            string query = "SELECT * FROM Usuario WHERE UserName = @pUserName AND Contraseña = @pContraseña";
-            u = connection.QueryFirstOrDefault<Usuario>(query, new { pUserName = UserName, pContraseña = contraseña });
+            string query = "SELECT * FROM Usuario WHERE Id = @pIdUsuario";
+             miusuario = connection.QueryFirstOrDefault<Usuario>(query, new { pIdUsuario = idUsuario });
+            return miusuario;
         }
-        if(u != null){  return u;}
-        else{return u = null;}     
+    }
+
+    public static int Login(string UserName, string Contraseña)
+    {
+        int id = 0;
+        using (SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            string query = "SELECT Id FROM Usuario WHERE UserName = @pUserName AND Contraseña = @pcontraseña";
+            id = connection.QueryFirstOrDefault<int>(query, new { pUserName = UserName, pcontraseña = Contraseña });
+        }
+if(id != 0){  return id;}
+ else{return id = -1;}     
     }
 
 
+
 public static int EliminarTarea(int Idtarea){
-string query = "DELETE FROM Tarea WHERE Idt= IDtarea";
+string query = "DELETE FROM Tarea WHERE Id= Idtarea";
 int tareasAfectados = 0;
 using (SqlConnection connection = new SqlConnection(_connectionString))
 {
@@ -38,10 +49,10 @@ return tareasAfectados;
 
     public static void AgregarTarea(Tarea t)
     {
-       string query = "INSERT INTO Tarea (Id, Titulo, Descripción, Fecha, Finalizada, IdUsuario)";
+       string query = "INSERT INTO Tarea (Id, Titulo, Descripción, Fecha, Finalización, IdUsuario)";
         using (SqlConnection connection = new SqlConnection(_connectionString))
         {
-           connection.Execute(query, new{pIdt = t.Id, pTitulo = t.Titulo,pDescripción = t.Descripción,pFecha = t.Fecha, pFinalizada = t.Finalizada,pIdUsuario = t.IdUsuario});
+           connection.Execute(query, new{pIdt = t.Id, pTitulo = t.Titulo,pDescripción = t.Descripción,pFecha = t.Fecha, pFinalizada = t.Finalización,pIdUsuario = t.IdUsuario});
         }
   
     }
@@ -52,7 +63,7 @@ return tareasAfectados;
         SET Titulo = @Titulo,
             Descripción = @Descripción,
             Fecha = @Fecha,
-            Finalizada = @Finalizada
+            Finalización = @Finalización
         WHERE Id = @Id";
 
     using (SqlConnection connection = new SqlConnection(_connectionString))
@@ -62,7 +73,7 @@ return tareasAfectados;
             Titulo = t.Titulo,
             Descripción = t.Descripción,
             Fecha = t.Fecha,
-            Finalizada = t.Finalizada
+            Finalización = t.Finalización
         });
         return registrosAfectados;
     }
@@ -92,18 +103,17 @@ public static  Usuario VerUsuario(int Id){
     }
     return u;
 }
-
-public static List<Tarea> VerTareas(int IdUsuario){
- List<Tarea> Tareas = new List<Tarea>();
-using (SqlConnection connection = new SqlConnection(_connectionString))
+public static List<Tarea> VerTareas(int IdUsuario)
 {
-string query = "SELECT * FROM Tarea WHERE IdUsuario = @pIdUsuario";
-Tareas= connection.Query<Tarea>(query).ToList();
+    using (SqlConnection connection = new SqlConnection(_connectionString))
+    {
+        string query = "SELECT * FROM Tarea WHERE IdUsuario = @IdUsuario";
 
-}
+        // Pasamos el parámetro correctamente
+        var Tareas = connection.Query<Tarea>(query, new { IdUsuario }).ToList();
 
-return  Tareas;
-
+        return Tareas;
+    }
 }
 
 
@@ -121,37 +131,41 @@ public static int ActualizarFecha(int Id)
 }
 
 
-public static int RegistrarUsuario(string nombre, string apellido, string email, string contrasena, string userName)
+public static int RegistrarUsuario(string nombre, string apellido,  string contrasena, string userName)
 {
+    
     string query = @"
-        INSERT INTO Usuario (Nombre, Apellido, Email, [Contraseña], UserName, FechaUltimoLogin) 
-        VALUES (@Nombre, @Apellido, @Email, @Contrasena, @UserName, NULL);
+        INSERT INTO Usuario (Nombre, Apellido, [Contraseña], UserName, UltimoLogIn) 
+        VALUES (@Nombre, @Apellido, @Contrasena, @UserName, @UltimoLogIn);
         SELECT CAST(SCOPE_IDENTITY() as int);";
 
     using (SqlConnection connection = new SqlConnection(_connectionString))
     {
+        connection.Open();
         int nuevoId = connection.QuerySingle<int>(query, new 
         { 
-            Nombre = nombre, 
-            Apellido = apellido, 
-            Email = email, 
-            Contrasena = contrasena,
-            UserName = userName 
+            Nombre = nombre,
+            Apellido = apellido,
+         
+            UserName = userName,
+            UltimoLogIn = DateTime.Now,
+            
+            Contrasena = contrasena
         });
 
         return nuevoId;
     }
 }
 
-     public static int FinalizarTarea(int idTarea, bool finalizada)
+     public static int FinalizarTarea(int idTarea, bool Finalización)
         {
-            string query = @"UPDATE Tarea SET Finalizada = @Finalizada WHERE Id = @Id";
-
+            string query = @"UPDATE Tarea SET Finalización = @Finalización WHERE Id = @Id";
+   int registrosAfectados = 0;
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
-                int registrosAfectados = connection.Execute(query, new
+                 registrosAfectados = connection.Execute(query, new
                 {
-                    Finalizada = finalizada,
+                    Finalización = Finalización,
                     Id = idTarea   
                 });
 
