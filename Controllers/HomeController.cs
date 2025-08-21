@@ -37,7 +37,7 @@ public IActionResult VerTareas()
 public IActionResult GuardarFinalizarTarea(int idTarea,bool finalizada)
 {
     int id = int.Parse(HttpContext.Session.GetString("idUser"));
-    ViewBag.Tareas = BD.finalizartarea( idTarea,  finalizada);
+    ViewBag.Tareas = BD.FinalizarTarea( idTarea,  finalizada);
    
     return View("ListaTareas");
 }

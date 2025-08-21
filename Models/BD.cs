@@ -16,7 +16,7 @@ namespace ToDoListmaster.Models
         Usuario u = null;
         using (SqlConnection connection = new SqlConnection(_connectionString))
         {
-            string query = "SELECT Id FROM Usuario WHERE UserName = @pUserName AND Contraseña = @pContraseña";
+            string query = "SELECT * FROM Usuario WHERE UserName = @pUserName AND Contraseña = @pContraseña";
             u = connection.QueryFirstOrDefault<Usuario>(query, new { pUserName = UserName, pContraseña = contraseña });
         }
         if(u != null){  return u;}
@@ -142,17 +142,23 @@ public static int RegistrarUsuario(string nombre, string apellido, string email,
         return nuevoId;
     }
 }
+
+     public static int FinalizarTarea(int idTarea, bool finalizada)
+        {
+            string query = @"UPDATE Tarea SET Finalizada = @Finalizada WHERE Id = @Id";
+
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                int registrosAfectados = connection.Execute(query, new
+                {
+                    Finalizada = finalizada,
+                    Id = idTarea   
+                });
+
+                return registrosAfectados;
+            }
+        }
+
+
 }
-    public static int finalizartarea(int Idtarea, bool finalizada){
-    string query = @"UPDATE Tarea SET Finalizada = @Finalizada WHERE Id = @Id";
-      using (SqlConnection connection = new SqlConnection(_connectionString))
-    {
-         int registrosAfectados = connection.Execute(query, new {Finalizada = finalizada, Is=Idtarea
-        });
-        return registrosAfectados;
-
-    }
-}
-
-
 }

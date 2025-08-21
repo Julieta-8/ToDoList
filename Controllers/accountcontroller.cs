@@ -13,7 +13,7 @@ public class accountController : Controller
     {
         HttpContext.Session.SetString("idUser", u.ToString());
         
-        return View("Cuenta");
+        return View("ListarTareas");
     }
     else
     {

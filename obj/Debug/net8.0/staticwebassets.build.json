@@ -1,10 +1,6 @@
 {
   "Version": 1,
-<<<<<<< HEAD
   "Hash": "rSqAZjm/BEy3j09frGfhTJ1ANDDVYcSeE6GIK0P3qfU=",
-=======
-  "Hash": "U/QpnjrQXfiU7Es4Sr48t2yLGAwL5l7qA/QD/iIgSrA=",
->>>>>>> dc5e1c4ce3d1c868405925503b525b8dfaf3943b
   "Source": "TP07",
   "BasePath": "_content/TP07",
   "Mode": "Default",
@@ -14,17 +10,17 @@
     {
       "Name": "TP07\\wwwroot",
       "Source": "TP07",
-      "ContentRoot": "C:\\Users\\49192786\\ToDoList\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48799592\\ToDoList\\wwwroot\\",
       "BasePath": "_content/TP07",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\49192786\\ToDoList\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\48799592\\ToDoList\\wwwroot\\css\\site.css",
       "SourceId": "TP07",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49192786\\ToDoList\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48799592\\ToDoList\\wwwroot\\",
       "BasePath": "_content/TP07",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -40,10 +36,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\49192786\\ToDoList\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\48799592\\ToDoList\\wwwroot\\favicon.ico",
       "SourceId": "TP07",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49192786\\ToDoList\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48799592\\ToDoList\\wwwroot\\",
       "BasePath": "_content/TP07",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -59,7 +55,6 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\Users\\48799592\\ToDoList\\wwwroot\\img\\lucia.jpg",
       "SourceId": "TP07",
       "SourceType": "Discovered",
@@ -156,12 +151,9 @@
     },
     {
       "Identity": "C:\\Users\\48799592\\ToDoList\\wwwroot\\js\\site.js",
-=======
-      "Identity": "C:\\Users\\49192786\\ToDoList\\wwwroot\\js\\site.js",
->>>>>>> dc5e1c4ce3d1c868405925503b525b8dfaf3943b
       "SourceId": "TP07",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49192786\\ToDoList\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48799592\\ToDoList\\wwwroot\\",
       "BasePath": "_content/TP07",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -177,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "C:\\Users\\49192786\\ToDoList\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "C:\\Users\\48799592\\ToDoList\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "TP07",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49192786\\ToDoList\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48799592\\ToDoList\\wwwroot\\",
       "BasePath": "_content/TP07",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -196,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "C:\\Users\\49192786\\ToDoList\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "C:\\Users\\48799592\\ToDoList\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "TP07",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49192786\\ToDoList\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48799592\\ToDoList\\wwwroot\\",
       "BasePath": "_content/TP07",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -215,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "C:\\Users\\49192786\\ToDoList\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "C:\\Users\\48799592\\ToDoList\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "TP07",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49192786\\ToDoList\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48799592\\ToDoList\\wwwroot\\",
       "BasePath": "_content/TP07",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
@@ -234,10 +226,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\49192786\\ToDoList\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "C:\\Users\\48799592\\ToDoList\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "TP07",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49192786\\ToDoList\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48799592\\ToDoList\\wwwroot\\",
       "BasePath": "_content/TP07",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -253,10 +245,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "C:\\Users\\49192786\\ToDoList\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "C:\\Users\\48799592\\ToDoList\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "TP07",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49192786\\ToDoList\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48799592\\ToDoList\\wwwroot\\",
       "BasePath": "_content/TP07",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -272,10 +264,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "C:\\Users\\49192786\\ToDoList\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "C:\\Users\\48799592\\ToDoList\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "TP07",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49192786\\ToDoList\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48799592\\ToDoList\\wwwroot\\",
       "BasePath": "_content/TP07",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -291,10 +283,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "C:\\Users\\49192786\\ToDoList\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "C:\\Users\\48799592\\ToDoList\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "TP07",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49192786\\ToDoList\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48799592\\ToDoList\\wwwroot\\",
       "BasePath": "_content/TP07",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -310,10 +302,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "C:\\Users\\49192786\\ToDoList\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "C:\\Users\\48799592\\ToDoList\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "TP07",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49192786\\ToDoList\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48799592\\ToDoList\\wwwroot\\",
       "BasePath": "_content/TP07",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -329,10 +321,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "C:\\Users\\49192786\\ToDoList\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "C:\\Users\\48799592\\ToDoList\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "TP07",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49192786\\ToDoList\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48799592\\ToDoList\\wwwroot\\",
       "BasePath": "_content/TP07",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -348,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "C:\\Users\\49192786\\ToDoList\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "C:\\Users\\48799592\\ToDoList\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "TP07",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49192786\\ToDoList\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48799592\\ToDoList\\wwwroot\\",
       "BasePath": "_content/TP07",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -367,10 +359,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "C:\\Users\\49192786\\ToDoList\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "C:\\Users\\48799592\\ToDoList\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "TP07",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49192786\\ToDoList\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48799592\\ToDoList\\wwwroot\\",
       "BasePath": "_content/TP07",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -386,10 +378,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "C:\\Users\\49192786\\ToDoList\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "C:\\Users\\48799592\\ToDoList\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "TP07",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\49192786\\ToDoList\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48799592\\ToDoList\\wwwroot\\",
       "BasePath": "_content/TP07",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
